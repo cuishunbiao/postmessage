@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    接收方：
+    <div id="txtMsg" class="p20"></div>
+    <script>
+        window.addEventListener('message',event=>{
+            document.getElementById("txtMsg").innerHTML = event.data;
+        })
+
+    </script>
+</body>

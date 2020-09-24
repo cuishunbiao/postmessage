@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>发送方</title>
+</head>
+
+<body>
+    <h1>发送方</h1>
+    <button id="send">sendMsg</button>
+</body>
+<script>
+
+    let send = document.getElementById('send');
+
+    send.addEventListener('click',()=>{
+        const win = window.open('./target.html','targetPage');
+
+        setTimeout(()=>{
+            win.postMessage(Math.random(Math.round(1)),"*")
+        },20)
+    })
+
+</script>
+
+</html>
